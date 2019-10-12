@@ -1,0 +1,69 @@
+<style>
+    * {
+        color: #336380;
+    }
+
+    #whiteframe {
+        margin: 100px 20px;
+        height: 100vh;
+        border-radius: 16px;
+    }
+
+    header {
+        text-align: center;
+    }
+
+    h1 {
+        font-size: 56px;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin: 0px auto;
+    }
+
+    #profilepic {
+        margin-top: -60px;
+        border-radius: 20% !important;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+</style>
+
+<div>
+    <header><h1 id="profile-title">Profile</h1></header>
+
+    <div id="whiteframe" md-whiteframe="18" layout="column" layout-align="start center">
+
+        <!--Profilbild und Settings-->
+        <div layout="column" layout-align="center center">
+            <img id="profilepic" src=".\resources\angela.jpg" alt="Profilepic" height="200px">
+
+            <md-button class="md-accent">
+                <md-icon ng-bind="'edit'"></md-icon>
+                Edit Profile
+            </md-button>
+        </div>
+
+        <!--Vor- und Nachname-->
+        <h2 id="name">Max Mustermann</h2>
+
+        <!-- Icon, Location-->
+        <div layout="row" layout-align="center center">
+            <md-icon ng-bind="'my_location'"></md-icon>
+            <h3 id="country" class="md-subhead">Austria, </h3>
+            <h3 id="city" class="md-subhead">Vienna</h3>
+        </div>
+
+        <!--um die Tags dynamisch zu machen bitte hier nachschauen -->
+        <!--https://material.angularjs.org/latest/demo/chips-->
+        <md-chips input-aria-describedby="staticChipsNote">
+            <md-chip>Nachteule</md-chip>
+            <md-chip>Architektur</md-chip>
+            <md-chip>Wienerisches Essen</md-chip>
+        </md-chips>
+
+        <md-content>
+            <p class="md-primary"> beschreibung </p>
+        </md-content>
+    </div>
+</div>
